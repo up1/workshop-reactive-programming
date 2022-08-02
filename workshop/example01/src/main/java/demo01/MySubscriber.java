@@ -15,6 +15,11 @@ public class MySubscriber implements Subscriber<String> {
 
     @Override
     public void onNext(String item) {
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         System.out.println("Process item = " + item);
         counter++;
     }

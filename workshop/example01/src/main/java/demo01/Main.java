@@ -15,11 +15,12 @@ public class Main {
         List<String> datas = getData();
         System.out.println("Publishing Items to Subscriber");
         datas.forEach(publisher::submit);
+
         System.out.println("Counter = " + subscriber.getCounter());
         publisher.close();
         System.out.println("Exiting the app");
-//        Thread.sleep(5000);
-//        System.out.println("Counter = " + subscriber.getCounter());
+        Thread.sleep(2000);
+        System.out.println("Counter = " + subscriber.getCounter());
     }
 
     private static List<String> getData() {
