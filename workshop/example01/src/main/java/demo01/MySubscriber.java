@@ -1,13 +1,14 @@
 package demo01;
 
-import java.util.concurrent.Flow;
+import java.util.concurrent.Flow.Subscriber;
+import java.util.concurrent.Flow.Subscription;
 
-public class Subscriber implements Flow.Subscriber<String> {
-    private Flow.Subscription subscription;
+public class MySubscriber implements Subscriber<String> {
+    private Subscription subscription;
     private int counter = 0;
 
     @Override
-    public void onSubscribe(Flow.Subscription subscription) {
+    public void onSubscribe(Subscription subscription) {
         this.subscription = subscription;
         subscription.request(100);
     }
@@ -26,7 +27,6 @@ public class Subscriber implements Flow.Subscriber<String> {
     @Override
     public void onComplete() {
         System.out.println("activity completed");
-
     }
 
     public int getCounter() {

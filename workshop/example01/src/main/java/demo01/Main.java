@@ -9,15 +9,17 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         SubmissionPublisher<String> publisher = new SubmissionPublisher<>();
-        Subscriber subscriber = new Subscriber();
+        MySubscriber subscriber = new MySubscriber();
         publisher.subscribe(subscriber);
 
         List<String> datas = getData();
         System.out.println("Publishing Items to Subscriber");
         datas.forEach(publisher::submit);
-//        Thread.sleep(5000);
+        System.out.println("Counter = " + subscriber.getCounter());
         publisher.close();
         System.out.println("Exiting the app");
+//        Thread.sleep(5000);
+//        System.out.println("Counter = " + subscriber.getCounter());
     }
 
     private static List<String> getData() {
