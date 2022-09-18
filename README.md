@@ -5,7 +5,7 @@
   * Java Stream API
   * Reactor
   * WebFlux
-* Comparision of Spring MVC vs Spring MVC Async + Spring Webflux
+* [Comparision of Spring MVC vs Spring MVC Async + Spring Webflux](https://github.com/up1/workshop-reactive-programming/wiki/Comparison)
   * [Spring MVC + Sync](https://github.com/up1/workshop-reactive-programming/tree/main/workshop/demo-sync)
   * [Spring MVC + Async](https://github.com/up1/workshop-reactive-programming/tree/main/workshop/demo-async)
   * [Spring Webflux](https://github.com/up1/workshop-reactive-programming/tree/main/workshop/demo-webflux)
