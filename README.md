@@ -1,5 +1,5 @@
 # Reactive Programming with Java
-* Reactive System
+* Reactive System/Architecture
 * Reactive Programming with Java
   * Java Flow
   * Java Stream API
